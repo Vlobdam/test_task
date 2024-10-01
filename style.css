@@ -1,0 +1,11 @@
+.comment_input {
+  display: flex;
+  justify-items: center;
+}
+
+.comment_input button {
+  height: 40px;
+  background-color: #ed9220;
+  color: white;
+  border-color:#ed9220
+}
