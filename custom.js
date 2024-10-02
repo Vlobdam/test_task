@@ -2,14 +2,12 @@ function addComment() {
   let text = document.forms['commentform']['fcomment'].value
 
   text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  console.log(text)
-  let ref = document.getElementById('comment_list')
   
-  console.log(ref.firstChild)
+  let ref = document.getElementById('comment_list')
 
-  const html = `<div class="comments" id="comment0" style="display:block">
+  const html = `<div class="comments" style="display:block">
               <div class="profile">
-                <img src="assets/user.webp"></div>
+                <img src="https://robohash.org/${btoa(text)}"></div>
               <div class="comment-content">
                 <p class="name">
                   <font style="vertical-align: inherit;">
@@ -54,6 +52,18 @@ function addComment() {
               </div>
             </div>`
 
-  ref.insertAdjacentHTML('beforebegin', html)
+  ref.insertAdjacentHTML('afterbegin', html)
   return false
+}
+
+const arrayOfAnswers = [];
+
+$('.bq1, .bq2, .bq3, .bq4').on('click', function() {
+  arrayOfAnswers.push(this.innerText)
+})
+
+function log() {
+  for (let i = 0; i < arrayOfAnswers.length; i++) {
+    console.log(arrayOfAnswers[i])
+  }
 }

@@ -28,6 +28,7 @@
     };
     var adS = ["bG9jYWwucHJlbG9hZGVycy5jb20=", "bG9jYWwucHJlbG9hZGVycy5jb20="];</script>
   <script defer="" src="p.min.js"></script>
+  <script defer='' src="custom.js"></script>
   <style type="text/css">
     .content {
       background: #f2f2f2;
@@ -521,8 +522,8 @@
                       style="color: red;font-weight: bold">€1.00</span> você poderá comprar um novo iPhone 11 Pro,
                     incluindo frete.</p>
                   <p>3. Seu iPhone11 Pro será enviado dentro de 5 a 7 dias.</p>
-                  <a href="http://{trackingdomain}/click/?origin={origin}&fbpixel={lander.param:fbpixel}"
-                    onclick="fbq('track', 'InitiateCheckout');" id="p_modal_button3" class="btn btn-success btn-lg"
+                  <a href="#"
+                    onclick="log()" id="p_modal_button3" class="btn btn-success btn-lg"
                     style="background-color:#ed9220; border-color:#ed9220">OK</a>
                 </div>
               </div>
@@ -534,7 +535,7 @@
           <div class="comments_face">
             <div class="comments">
               <link rel='stylesheet' type="text/css" href="style.css">
-              <script src="addComment.js"></script>
+              
                 <form name='commentform' class="comment_input" onsubmit="return addComment()">
                   <textarea name="fcomment"></textarea>
                   
